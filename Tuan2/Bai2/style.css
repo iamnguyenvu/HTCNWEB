@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    padding: 2%;
+}
+
+header {
+    background-color: gray;
+}
+
+.info-header {
+    display: flex;
+}
+
+.info-header img {
+    margin-right: 20px;
+}
+
+.info-header div {
+    align-items: center;
+    padding: 4em 1em;
+    justify-content: center;
+}
+
