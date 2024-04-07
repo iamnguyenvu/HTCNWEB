@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/script.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <img class="col-12" src="../img/banner_car.jpg" alt="">
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <table class="table table-bordered">
+                    <tr class="table-active text-info text-center bg-white font-weight-bold title">
+                        <td colspan="2">Bang tin thi truong</td>
+                    </tr>
+                    <tr class="table-active text-primary text-center font-weight-bold bg-white">
+                        <td colspan="2">Vang</td>
+                    </tr>
+                    <tr class="text-primary text-center font-weight-bold">
+                        <td>Mua vao</td>
+                        <td>Ban ra</td>
+                    </tr>
+                    <tr class="text-center" style="height: 40px;">
+                        <td id="buyGoldIn"></td>
+                        <td id="buyGoldOut"></td>
+                    </tr>
+                    <tr class="table-active text-primary text-center font-weight-bold bg-white">
+                        <td colspan="2">USD</td>
+                    </tr>
+                    <tr class="text-primary text-center font-weight-bold">
+                        <td>Mua vao</td>
+                        <td>Ban ra</td>
+                    </tr>
+                    <tr class="text-center" style="height: 40px;">
+                        <td id="buyUSDIn"></td>
+                        <td id="buyUSDOut"></td>
+                    </tr>
+
+                </table>
+            </div>
+            <div class="col-4">
+                <table class="table table-bordered table-secondary">
+                    <tr class="text-primary text-center font-weight-bold title">
+                        <td colspan="2">Cap nhap gia ca thi truong</td>
+                    </tr>
+                    <tr class="text-left font-weight-bold">
+                        <td>Mua vao</td>
+                        <td>
+                            <input type="text" name="ipBuyIn" id="ipBuyIn" style="width: 70%;">
+                            <span class="errBuyIn"></span>
+                        </td>
+                    </tr>
+                    <tr class="text-left font-weight-bold">
+                        <td>Ban ra</td>
+                        <td>
+                            <input type="text" name="ipBuyOut" id="ipBuyOut" style="width: 70%;">
+                            <span class="errBuyOut"></span>
+                        </td>
+                    </tr>
+                    <tr class="text-left font-weight-bold">
+                        <td>Loai xe</td>
+                        <td>
+                            <select name="carType" id="carType">
+                                <option value="../img/car1.jpg;35000">Toyota</option>
+                                <option value="../img/car2.jpg;15000">KIA</option>
+                                <option value="../img/car3.jpg;40000">Ford</option>
+                                <option value="../img/car4.jpg;32000">Civic</option>
+                                <option value="../img/car5.jpg;50000">Ferrari</option>
+                                <option value="../img/car7.jpg;45000">Mercedes</option>
+                            </select>
+                            <span></span>
+                        </td>
+                    </tr>
+                    <tr class="text-left font-weight-bold">
+                        <td></td>
+                        <td>
+                            <input id="currencyGold" type="radio" name="currency" value="1">
+                            <label for="currencyGold">Vang</label>
+                            <input id="currencyUSD" type="radio" name="currency" value="0">
+                            <label for="currencyUSD">USD</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <button id="btnUpdate" disabled="disabled">Update</button>
+                            <button id="btnState">State</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="col-4">
+                <table class="table table-bordered">
+                    <tr class="text-center text-primary font-weight-bold table-active title">
+                        <td>Bang bao gia</td>
+                    </tr>
+                    <tr class="text-primary text-left">
+                        <td>
+                            <div id="infor" style="font-size: 12px;">
+                                <p>- với kiểu dáng thể thao, sang trọng</p>
+                                <p>- nổi bật, ít tốn nhiên liệu</p>
+                                <p>- kiểu dáng thể thao</p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr class="table-active">
+                        <td><img id="carImage" src="" alt=""></td>
+                    </tr>
+                    <tr class="text-left text-success">
+                        <td>
+                            Gia: <span id="carPrice"></span> USD
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

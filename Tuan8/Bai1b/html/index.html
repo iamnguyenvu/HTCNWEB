@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="../img/f.png" alt="">
+            <div class="titlehead">
+                <form action="">
+                    <label for="email">Email or SDT</label>
+                    <input type="text" id="jtf-ED">
+                    <label for="mk">mat Khau</label>
+                    <input type="text" id="jtf-MK">
+                    <input type="submit" id="dangnhap" value="dangnhap">
+                </form>
+            </div>
+            
+        </div>
+        <div class="main">
+            <div class="imgmain">
+                <img src="../img/2.png" alt="">
+            </div>
+            <div class="form-main">
+                <h1>Dăng ky</h1>
+                <p>Mien phi va se luon nhu vay</p>
+                <form action="">
+                    <div class="form-row">
+                        <input type="text" id="ho" placeholder="Ho">
+                        <input type="text" id="ten" placeholder="Ten">
+                        <input type="email" id="email" placeholder="Email dang nhap">
+                        <input type="email" id="confirmEmail" placeholder="Nhap lai emai">
+                        <input type="password" id="password" placeholder="Mat khau">
+                        <input type="date" id="namsinh" placeholder="nam sinh">
+                        <input type="submit" id="dangky" value="dang ky">
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+    function check() {
+        var ho = $("#ho").val().trim(); 
+        if (!ho) {
+            alert("Họ không được để trống");
+            return false;
+        }
+        var regex = /^[A-Z]{1}[a-z]*$/;
+        if(!regex.test(ho)){
+            alert("ho va ten bat dau bang chu");
+            return false;
+        }
+        
+        var ten = $("#ten").val().trim();
+        if (!ten) {
+            alert("Tên không được để trống");
+            return false;
+        }
+        if(!regex.test(ten)){
+            alert("ho va ten bat dau bang chu");
+            return false;
+        }
+        var email = $("#email").val().trim();
+    
+        if (!email) {
+            alert("Email không được để trống");
+            return false;
+        }
+
+        var confirmEmail = $("#confirmEmail").val().trim();
+        if (!confirmEmail) {
+            alert("Xác nhận Email không được để trống");
+            return false;
+        }
+
+        if (email !== confirmEmail) {
+            alert("Email và xác nhận Email không khớp nhau");
+            return false;
+        }
+
+        var password = $("#password").val();
+        var regexps = /^[A-Za-z0-9]{6,}$/;
+        if (!password) {
+            alert("Mật khẩu không được để trống");
+            return false;
+        }
+        if(!regexps.test(password)){
+            alert("Mật khẩu phải có ký tự chữ, số và ít nhất là 6 ký tự");
+            return false;
+        }
+
+        var namsinh = new Date($("#namsinh").val());
+        var ns = namsinh.getFullYear();
+        if (!namsinh) {
+            alert("Năm sinh không được để trống");
+            return false;
+        }
+        if(ns > 2022){
+            alert("Năm sinh phải <2002");
+            return false;
+        }
+
+        
+        return true;
+    }
+
+    $("form").submit(function() {
+        return check();
+    });
+});
+;
+    </script>
+</body>
+</html>
